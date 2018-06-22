@@ -1,3 +1,21 @@
+/*********************
+Breakpoints
+*********************/
+/*********************
+Box sizing
+*********************/
+/*********************
+  Transitions
+  *********************/
+/*********************
+  Border radius
+  *********************/
+/*********************
+  Responsive
+  *********************/
+/*********************
+  Font mixin
+  *********************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -63,18 +81,30 @@ body {
   align-items: center; }
   #canvas h1 {
     font-family: BlackDiamond;
-    font-size: 125px;
+    font-size: 60px;
     color: #caf2e9;
     transition: all 250ms ease-in-out;
     position: relative;
     top: -20px;
     text-shadow: 0px 0px 0px rgba(222, 222, 222, 0.8); }
+    @media (min-width: 768px) {
+      #canvas h1 {
+        font-size: 80px; } }
+    @media (min-width: 992px) {
+      #canvas h1 {
+        font-size: 125px; } }
     #canvas h1:hover {
       transform: scale(1.03);
       text-shadow: 0px 10px 10px rgba(222, 222, 222, 0.33); }
     #canvas h1 span {
-      font-size: 200px;
+      font-size: 120px;
       display: block;
       position: relative;
       left: 25px;
       top: -22px; }
+      @media (min-width: 768px) {
+        #canvas h1 span {
+          font-size: 150px; } }
+      @media (min-width: 992px) {
+        #canvas h1 span {
+          font-size: 200px; } }
