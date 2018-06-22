@@ -1,0 +1,24 @@
+{
+  "name": "huuuub.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joehubbard/huuuub.com.git"
+  },
+  "author": "Joe Hubbard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joehubbard/huuuub.com/issues"
+  },
+  "homepage": "https://github.com/joehubbard/huuuub.com#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

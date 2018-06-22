@@ -1,0 +1,38 @@
+body{
+    background-color: #fcfcfc;
+    padding: 20px;
+}
+
+#canvas{
+    // border: 20px solid #caf2e9;
+    height: calc(100vh - 40px);
+    width: calc(100vw - 40px);
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-family: BlackDiamond;
+        font-size: 125px;
+        color: #caf2e9;
+        transition: all 250ms ease-in-out;
+        position: relative;
+        top: -20px;
+        text-shadow: 0px 0px 0px rgba(222,222,222,0.8);
+
+
+        &:hover{
+            transform: scale(1.03);
+            text-shadow: 0px 10px 10px rgba(222,222,222,0.33);
+        }
+
+        span{
+            font-size: 200px;
+            display: block;
+            position: relative;
+            left: 25px;
+            top: -22px;
+        }
+    }
+}
