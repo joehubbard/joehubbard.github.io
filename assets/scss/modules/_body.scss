@@ -1,12 +1,13 @@
 body{
     background-color: #fcfcfc;
-    padding: 20px;
 }
 
 #canvas{
     // border: 20px solid #caf2e9;
-    height: calc(100vh - 40px);
-    width: calc(100vw - 40px);
+    // height: calc(100vh - 40px);
+    // width: calc(100vw - 40px);
+    height: 100vh;
+    width: 100vw;
     background-color: #fcfcfc;
     display: flex;
     justify-content: center;
