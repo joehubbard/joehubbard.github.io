@@ -1,0 +1,18 @@
+
+// Header section styles
+
+header{
+    min-height: 410px;
+    background-image: url(../images/banner.png);
+    background-position: 0 -130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.45;
+    -webkit-filter: blur(10.7px);
+    filter: blur(10.7px);
+
+    // Make the blur sit behind other elements
+    transform: scale(1.05);
+    position: relative;
+    z-index: -1;
+}

@@ -1,5 +1,8 @@
 @import 'modules/config';
 @import 'modules/mixins';
+@import 'modules/grid';
 @import 'modules/reset';
 @import 'modules/fonts';
-@import 'modules/body';
+
+@import 'partials/header';
+@import 'partials/intro';
