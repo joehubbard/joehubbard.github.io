@@ -1162,8 +1162,23 @@ table {
   src: url(../fonts/black_diamond.otf);
 }
 
+@font-face {
+  font-family: black-diamond;
+  src: url("../fonts/black_diamond.otf");
+}
+
+@font-face {
+  font-family: go-mono;
+  src: url("../fonts/go_mono.ttf");
+}
+
 header {
   min-height: 410px;
+  position: relative;
+}
+
+header .header__background {
+  height: 100%;
   background-image: url(../images/banner.png);
   background-position: 0 -130px;
   background-repeat: no-repeat;
@@ -1173,8 +1188,50 @@ header {
   filter: blur(10.7px);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
+}
+
+header .header__title {
+  float: left;
+  font-size: 120px;
+  font-family: black-diamond;
+  margin-left: 50px;
+  margin-top: 20px;
+  color: #707070;
+  text-shadow: 0px 0px 7 40px #f3f3f3;
+  opacity: 0.75;
+}
+
+header .header__title > span {
+  font-size: 14px;
+  position: relative;
+  top: -45px;
+  font-family: go-mono;
+  text-shadow: 0px 0px 7px #f3f3f3;
+}
+
+header .header__pp {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  float: right;
+  margin-right: 50px;
+}
+
+header .header__container {
+  height: 410px;
+}
+
+header .header__grid {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 section.intro {

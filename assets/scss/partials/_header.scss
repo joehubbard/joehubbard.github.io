@@ -1,18 +1,78 @@
 
 // Header section styles
 
+@font-face {
+    font-family: black-diamond;
+    src: url('../fonts/black_diamond.otf');
+}
+
+@font-face {
+    font-family: go-mono;
+    src: url('../fonts/go_mono.ttf');
+}
+
 header{
     min-height: 410px;
-    background-image: url(../images/banner.png);
-    background-position: 0 -130px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.45;
-    -webkit-filter: blur(10.7px);
-    filter: blur(10.7px);
-
-    // Make the blur sit behind other elements
-    transform: scale(1.05);
     position: relative;
-    z-index: -1;
+    .header{
+        &__background{
+            height: 100%;
+            background-image: url(../images/banner.png);
+            background-position: 0 -130px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.45;
+            -webkit-filter: blur(10.7px);
+            filter: blur(10.7px);
+        
+            // Make the blur sit behind other elements
+            transform: scale(1.05);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        
+        }
+
+        &__title{
+            float: left;
+            font-size: 120px;
+            font-family: black-diamond;
+            margin-left: 50px;
+            margin-top: 20px;
+            color: #707070;
+            text-shadow: 0px 0px 7 40px #f3f3f3;
+            opacity: 0.75;
+
+            >span{
+                font-size: 14px;
+                position: relative;
+                top: -45px;
+                font-family: go-mono;
+                text-shadow: 0px 0px 7px #f3f3f3;
+            }
+        }
+
+        &__pp{ 
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+            float: right;
+            margin-right: 50px;
+        }
+
+        &__container{
+            height: 410px;
+        }
+
+        &__grid{
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+    
+
 }
