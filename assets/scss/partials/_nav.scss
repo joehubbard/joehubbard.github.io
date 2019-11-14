@@ -1,0 +1,126 @@
+.navcontrol{
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    z-index: 5;
+    .hamburger{
+        height: 22px;
+        &:hover{
+            cursor: pointer;
+        }
+        .line{
+            height: 4px;
+            width: 30px;
+            background-color: #8d8583;
+            border-radius: 1px;
+            position: relative;
+            // box-shadow:  0 0 4px #575353;
+            transition: 100ms all ease-in-out;          
+            &__one{
+                width: 30px;
+            }
+
+            &__two{
+                width: 22.5px;
+                top: 5px;
+            }
+
+            &__three{
+                width: 15px;
+                top: 10px;
+            }
+        }
+        
+        &.hover{
+            .line{
+                width: 30px;
+                
+                // &__one{
+                //     width: 15px;
+                // }
+    
+                // &__two{
+                //     width: 15px;
+                // }
+    
+                // &__three{
+                //     width: 30px;
+                // }
+            }
+        }
+
+        &.open{
+            .line{
+                width: 30px;
+                &__one{
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                    width: 25.4px;
+                }
+
+                &__two{
+                    // width: 15px;
+                    opacity: 0;
+                }
+
+                &__three{
+                    transform: rotate(-45deg);
+                    transform-origin: left;
+                    width: 25.4px;
+                }
+            }
+        }
+    }
+}
+
+.body__wrapper{
+    transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38); 
+    &.navActive{
+        transform: translate(350px, 0);
+
+        ~nav{
+            transform: translate(0, 0);
+        }
+
+        .bodydimmer{
+            z-index: 10;
+            opacity: 0.6;
+        }
+    }
+
+    .bodydimmer{
+        opacity: 0;
+        background: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transition: ease-in-out all 350ms;
+    }
+}
+
+nav{
+    // height: 100vh;
+    width: 350px;
+    transform: translate(-350px, 0);
+    background-color: #444;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38); 
+    ul{
+        margin: 100px 0 0 50px;
+
+        li{
+            margin: 25px 0;
+            span{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

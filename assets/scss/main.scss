@@ -3,6 +3,12 @@
 @import 'modules/grid';
 @import 'modules/reset';
 @import 'modules/fonts';
+@import 'modules/images';
+@import 'modules/headings';
+@import 'modules/typography';
+@import 'modules/global';
 
 @import 'partials/header';
+@import 'partials/nav';
 @import 'partials/intro';
+@import 'partials/projects';

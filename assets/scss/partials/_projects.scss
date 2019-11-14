@@ -1,4 +1,4 @@
-.intro{
+.projects{
     background-color: #fff;
     padding: 28px 0;
 
@@ -8,12 +8,18 @@
     }
 
     h2{
-        margin-top: 49px;
         line-height: 1.2;
     }
 
     h3{
-        margin: 60px 0 0 136px;
         line-height: 1.2;
+        margin-top: 140px;
+    }
+
+    &__links{
+        img{
+            max-height: 280px;
+            max-width: 470px;
+        }
     }
 }

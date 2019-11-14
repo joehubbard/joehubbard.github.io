@@ -1135,7 +1135,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  overflow: hidden;
 }
 
 ol, ul {
@@ -1160,6 +1159,64 @@ table {
 @font-face {
   font-family: BlackDiamond;
   src: url(../fonts/black_diamond.otf);
+}
+
+.float-img {
+  border-radius: 6px;
+}
+
+.shadow-img {
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: GoMonoForPowerline;
+  color: #707070;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.dotted-border {
+  z-index: 5;
+  position: relative;
+}
+
+.dotted-border:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 0px;
+  left: -40px;
+  right: 85px;
+  border: dotted 4px #f5f7fa;
+  -webkit-transform: translate(-20px, -12px);
+          transform: translate(-20px, -12px);
+  z-index: -1;
+}
+
+a {
+  color: #707070;
+  text-decoration: none;
+  font-family: go-mono;
 }
 
 @font-face {
@@ -1203,8 +1260,10 @@ header .header__title {
   margin-left: 50px;
   margin-top: 20px;
   color: #707070;
-  text-shadow: 0px 0px 7 40px #f3f3f3;
+  text-shadow: 3px 1px 2px #0a0a0a;
   opacity: 0.75;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 header .header__title > span {
@@ -1234,6 +1293,171 @@ header .header__grid {
           transform: translate(0, -50%);
 }
 
-section.intro {
+.navcontrol {
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  z-index: 5;
+}
+
+.navcontrol .hamburger {
+  height: 22px;
+}
+
+.navcontrol .hamburger:hover {
+  cursor: pointer;
+}
+
+.navcontrol .hamburger .line {
+  height: 4px;
+  width: 30px;
+  background-color: #8d8583;
+  border-radius: 1px;
+  position: relative;
+  -webkit-transition: 100ms all ease-in-out;
+  transition: 100ms all ease-in-out;
+}
+
+.navcontrol .hamburger .line__one {
+  width: 30px;
+}
+
+.navcontrol .hamburger .line__two {
+  width: 22.5px;
+  top: 5px;
+}
+
+.navcontrol .hamburger .line__three {
+  width: 15px;
+  top: 10px;
+}
+
+.navcontrol .hamburger.hover .line {
+  width: 30px;
+}
+
+.navcontrol .hamburger.open .line {
+  width: 30px;
+}
+
+.navcontrol .hamburger.open .line__one {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  width: 25.4px;
+}
+
+.navcontrol .hamburger.open .line__two {
+  opacity: 0;
+}
+
+.navcontrol .hamburger.open .line__three {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  width: 25.4px;
+}
+
+.body__wrapper {
+  -webkit-transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38);
+  transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38);
+}
+
+.body__wrapper.navActive {
+  -webkit-transform: translate(350px, 0);
+          transform: translate(350px, 0);
+}
+
+.body__wrapper.navActive ~ nav {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.body__wrapper.navActive .bodydimmer {
+  z-index: 10;
+  opacity: 0.6;
+}
+
+.body__wrapper .bodydimmer {
+  opacity: 0;
+  background: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-transition: ease-in-out all 350ms;
+  transition: ease-in-out all 350ms;
+}
+
+nav {
+  width: 350px;
+  -webkit-transform: translate(-350px, 0);
+          transform: translate(-350px, 0);
+  background-color: #444;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  -webkit-transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38);
+  transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38);
+}
+
+nav ul {
+  margin: 100px 0 0 50px;
+}
+
+nav ul li {
+  margin: 25px 0;
+}
+
+nav ul li span a {
+  font-size: 20px;
+}
+
+.intro {
   background-color: #fff;
+  padding: 28px 0;
+}
+
+.intro__img {
+  width: 471px;
+  height: 281.5px;
+}
+
+.intro h2 {
+  margin-top: 49px;
+  line-height: 1.2;
+}
+
+.intro h3 {
+  margin: 60px 0 0 136px;
+  line-height: 1.2;
+}
+
+.projects {
+  background-color: #fff;
+  padding: 28px 0;
+}
+
+.projects__img {
+  width: 471px;
+  height: 281.5px;
+}
+
+.projects h2 {
+  line-height: 1.2;
+}
+
+.projects h3 {
+  line-height: 1.2;
+  margin-top: 140px;
+}
+
+.projects__links img {
+  max-height: 280px;
+  max-width: 470px;
 }
