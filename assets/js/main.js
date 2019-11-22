@@ -25,5 +25,12 @@ $(document).ready(function($){
             }
         );
 
+    $('.bodydimmer')
+        .click(
+            function(){
+                $('.hamburger').click();
+            }
+        );
+
 
 });

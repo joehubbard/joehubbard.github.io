@@ -74,12 +74,13 @@
 }
 
 .body__wrapper{
-    transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38); 
+    transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38);
+    overflow-x: hidden;
     &.navActive{
         transform: translate(350px, 0);
 
         ~nav{
-            transform: translate(0, 0);
+            transform: translate(-50px, 0);
         }
 
         .bodydimmer{
@@ -103,14 +104,15 @@
 
 nav{
     // height: 100vh;
-    width: 350px;
-    transform: translate(-350px, 0);
+    width: 400px;
+    transform: translate(-400px, 0);
     background-color: #444;
     position: fixed;
     top: 0;
     bottom: 0;
     z-index: 4;
     transition: 350ms all cubic-bezier(0.42, 0, 0.55, 1.38); 
+    padding-left: 50px;
     ul{
         margin: 100px 0 0 50px;
 

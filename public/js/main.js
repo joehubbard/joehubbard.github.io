@@ -116,6 +116,10 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function ($) {
         $(this).toggleClass('open');
         $('.body__wrapper').toggleClass('navActive');
     });
+
+    $('.bodydimmer').click(function () {
+        $('.hamburger').click();
+    });
 });
 
 /***/ }),
