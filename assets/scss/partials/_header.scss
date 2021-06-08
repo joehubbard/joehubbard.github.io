@@ -33,35 +33,71 @@ header{
             left: 0;
             right: 0;
             z-index: -1;
+
+            &:after{
+                content: '';
+                position: absolute;
+                width: 100%; 
+                height:100%;
+                top:0; 
+                left:0;
+                background:rgba(0,0,0,0.5);
+                opacity: 1;
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+            }
         
         }
 
         &__title{
             float: left;
             font-size: 120px;
-            font-family: black-diamond;
+            font-family: 'Roboto', sans-serif;
             margin-left: 50px;
             margin-top: 20px;
-            color: #707070;
+            color: #ffffff;
             text-shadow: 3px 1px 2px #0a0a0a;
-            opacity: 0.75;
-            filter: brightness(0.7);
+            opacity: 0;
+            animation: 0.5s ease-in-out 0.6s 1 fade-left forwards;
+            max-height: 230px;
+            // >span{
+            //     font-size: 14px;
+            //     position: relative;
+            //     top: -45px;
+            //     font-family: go-mono;
+            //     text-shadow: 0px 0px 7px #f3f3f3;
+            // }
 
             >span{
-                font-size: 14px;
+                font-size: 50px;
                 position: relative;
                 top: -45px;
-                font-family: go-mono;
-                text-shadow: 0px 0px 7px #f3f3f3;
             }
+        }
+
+        &__slogan{
+            font-family: go-mono;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            display: block;
+            width: 490px;
+            margin: 0 auto;
+            line-height: 35px;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 100;
         }
 
         &__pp{ 
             height: 150px;
             width: 150px;
             border-radius: 100%;
-            float: right;
-            margin-right: 50px;
+            float: left;
+            margin-left: 75px;
+            margin-top: 40px;
+            animation: 0.5s cubic-bezier(0.28, 0.21, 0.6, 1.49) 0.5s 1 fade-up forwards;
+            opacity: 0;
         }
 
         &__container{
